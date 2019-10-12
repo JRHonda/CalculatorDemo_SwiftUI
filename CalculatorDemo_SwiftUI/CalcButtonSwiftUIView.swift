@@ -16,7 +16,7 @@ public struct CalcButtonSwiftUIView: View {
     var textColor: Color
     var width: CGFloat
     var height: CGFloat
-    var textAlignment: TextAlignment
+    var textAlignment: Alignment
     
     public var body: some View {
         
@@ -24,8 +24,7 @@ public struct CalcButtonSwiftUIView: View {
             Text(title)
                 .foregroundColor(textColor)
                 .font(Font.custom("Arial", size: (height) / 2))
-            .multilineTextAlignment(textAlignment)
-                .frame(width: width - 25, height: height, alignment: .leading)
+                .frame(width: width - (76/2), height: height, alignment: textAlignment)
         }
         .frame(width: width, height: height)
         .background(backgroundColor)
@@ -38,6 +37,6 @@ public struct CalcButtonSwiftUIView: View {
 struct CalcButtonSwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
-        CalcButtonSwiftUIView(action: {print("I'm a button")}, title: "0", backgroundColor: Colors.numbersBackground, textColor: Colors.numbersText, width: 100, height: 50, textAlignment: .center)
+        CalcButtonSwiftUIView(action: {print("I'm a button")}, title: "0", backgroundColor: Colors.numbersBackground, textColor: Colors.numbersText, width: 150, height: 75, textAlignment: .leading)
     }
 }
