@@ -18,10 +18,19 @@
 		0C610F5F23515F3C0048E8B8 /* CalcButtonSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C610F5E23515F3C0048E8B8 /* CalcButtonSwiftUIView.swift */; };
 		0C610F61235160B80048E8B8 /* CalcButtonsLayoutSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C610F60235160B80048E8B8 /* CalcButtonsLayoutSwiftUIView.swift */; };
 		0C610F6323517B590048E8B8 /* TestButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C610F6223517B590048E8B8 /* TestButton.swift */; };
+		0C610F6B2354234A0048E8B8 /* SwiftUITest_Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C610F6A2354234A0048E8B8 /* SwiftUITest_Results.swift */; };
+		0C610F73235423760048E8B8 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C610F72235423760048E8B8 /* Results.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0C610F4E23512C570048E8B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C610F2F23512C560048E8B8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C610F3623512C560048E8B8;
+			remoteInfo = CalculatorDemo_SwiftUI;
+		};
+		0C610F6D2354234A0048E8B8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0C610F2F23512C560048E8B8 /* Project object */;
 			proxyType = 1;
@@ -46,6 +55,10 @@
 		0C610F5E23515F3C0048E8B8 /* CalcButtonSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtonSwiftUIView.swift; sourceTree = "<group>"; };
 		0C610F60235160B80048E8B8 /* CalcButtonsLayoutSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcButtonsLayoutSwiftUIView.swift; sourceTree = "<group>"; };
 		0C610F6223517B590048E8B8 /* TestButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButton.swift; sourceTree = "<group>"; };
+		0C610F682354234A0048E8B8 /* SwiftUITest_Results.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUITest_Results.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C610F6A2354234A0048E8B8 /* SwiftUITest_Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITest_Results.swift; sourceTree = "<group>"; };
+		0C610F6C2354234A0048E8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C610F72235423760048E8B8 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +76,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0C610F652354234A0048E8B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +91,7 @@
 			children = (
 				0C610F3923512C560048E8B8 /* CalculatorDemo_SwiftUI */,
 				0C610F5023512C570048E8B8 /* CalculatorDemo_SwiftUITests */,
+				0C610F692354234A0048E8B8 /* SwiftUITest_Results */,
 				0C610F3823512C560048E8B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +101,7 @@
 			children = (
 				0C610F3723512C560048E8B8 /* CalculatorDemo_SwiftUI.app */,
 				0C610F4D23512C570048E8B8 /* CalculatorDemo_SwiftUITests.xctest */,
+				0C610F682354234A0048E8B8 /* SwiftUITest_Results.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,8 +137,18 @@
 			children = (
 				0C610F5123512C570048E8B8 /* CalculatorDemo_SwiftUITests.swift */,
 				0C610F5323512C570048E8B8 /* Info.plist */,
+				0C610F72235423760048E8B8 /* Results.swift */,
 			);
 			path = CalculatorDemo_SwiftUITests;
+			sourceTree = "<group>";
+		};
+		0C610F692354234A0048E8B8 /* SwiftUITest_Results */ = {
+			isa = PBXGroup;
+			children = (
+				0C610F6A2354234A0048E8B8 /* SwiftUITest_Results.swift */,
+				0C610F6C2354234A0048E8B8 /* Info.plist */,
+			);
+			path = SwiftUITest_Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +189,24 @@
 			productReference = 0C610F4D23512C570048E8B8 /* CalculatorDemo_SwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		0C610F672354234A0048E8B8 /* SwiftUITest_Results */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C610F6F2354234A0048E8B8 /* Build configuration list for PBXNativeTarget "SwiftUITest_Results" */;
+			buildPhases = (
+				0C610F642354234A0048E8B8 /* Sources */,
+				0C610F652354234A0048E8B8 /* Frameworks */,
+				0C610F662354234A0048E8B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C610F6E2354234A0048E8B8 /* PBXTargetDependency */,
+			);
+			name = SwiftUITest_Results;
+			productName = SwiftUITest_Results;
+			productReference = 0C610F682354234A0048E8B8 /* SwiftUITest_Results.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,6 +221,10 @@
 						CreatedOnToolsVersion = 11.1;
 					};
 					0C610F4C23512C570048E8B8 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 0C610F3623512C560048E8B8;
+					};
+					0C610F672354234A0048E8B8 = {
 						CreatedOnToolsVersion = 11.1;
 						TestTargetID = 0C610F3623512C560048E8B8;
 					};
@@ -191,6 +245,7 @@
 			targets = (
 				0C610F3623512C560048E8B8 /* CalculatorDemo_SwiftUI */,
 				0C610F4C23512C570048E8B8 /* CalculatorDemo_SwiftUITests */,
+				0C610F672354234A0048E8B8 /* SwiftUITest_Results */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +262,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0C610F4B23512C570048E8B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C610F662354234A0048E8B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -234,7 +296,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C610F73235423760048E8B8 /* Results.swift in Sources */,
 				0C610F5223512C570048E8B8 /* CalculatorDemo_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C610F642354234A0048E8B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C610F6B2354234A0048E8B8 /* SwiftUITest_Results.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +316,11 @@
 			isa = PBXTargetDependency;
 			target = 0C610F3623512C560048E8B8 /* CalculatorDemo_SwiftUI */;
 			targetProxy = 0C610F4E23512C570048E8B8 /* PBXContainerItemProxy */;
+		};
+		0C610F6E2354234A0048E8B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C610F3623512C560048E8B8 /* CalculatorDemo_SwiftUI */;
+			targetProxy = 0C610F6D2354234A0048E8B8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -458,6 +534,44 @@
 			};
 			name = Release;
 		};
+		0C610F702354234A0048E8B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63R954V4BB;
+				INFOPLIST_FILE = SwiftUITest_Results/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lagunalabs.SwiftUITest-Results";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CalculatorDemo_SwiftUI;
+			};
+			name = Debug;
+		};
+		0C610F712354234A0048E8B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 63R954V4BB;
+				INFOPLIST_FILE = SwiftUITest_Results/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lagunalabs.SwiftUITest-Results";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CalculatorDemo_SwiftUI;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -484,6 +598,15 @@
 			buildConfigurations = (
 				0C610F5A23512C570048E8B8 /* Debug */,
 				0C610F5B23512C570048E8B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C610F6F2354234A0048E8B8 /* Build configuration list for PBXNativeTarget "SwiftUITest_Results" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C610F702354234A0048E8B8 /* Debug */,
+				0C610F712354234A0048E8B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

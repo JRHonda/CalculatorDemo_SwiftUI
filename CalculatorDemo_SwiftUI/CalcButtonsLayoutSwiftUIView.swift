@@ -14,6 +14,7 @@ struct CalcButtonsLayoutSwiftUIView: View {
     @State var showAlert: Bool = false
     @State var textInResultView: String = ""
     @State var resultsFontSize: CGFloat = 50
+    @State var showDetails = false
     
     var body: some View {
         
@@ -25,6 +26,10 @@ struct CalcButtonsLayoutSwiftUIView: View {
                     .frame(width:300 , height: 100, alignment: Alignment.trailing)
                     .font(Font.custom("Arial", size: resultsFontSize))
                     .lineLimit(1)
+                    .allowsHitTesting(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+                    .id("resultsLabel")
+                    
+                    
                     
                 HStack {
                     VStack(spacing: 12){
@@ -95,11 +100,23 @@ struct CalcButtonsLayoutSwiftUIView: View {
                             
                         }, title: "+", backgroundColor: Colors.operatorsBackground, textColor: Colors.operatorsText, width: 75, height: 75, textAlignment: .center)
                         CalcButtonSwiftUIView(action: {
-                            
-                            }, title: "=", backgroundColor: Colors.operatorsBackground, textColor: Colors.operatorsText, width: 75, height: 75, textAlignment: .center)
+                            self.updateShowDetails()
+                        }, title: "=", backgroundColor: Colors.operatorsBackground, textColor: Colors.operatorsText, width: 75, height: 75, textAlignment: .center)
+                            .scaleEffect(showDetails ? 2 : 1)
+                            .animation(Animation.spring().delay(1))
+                            .rotationEffect(.degrees(showDetails ? 0 : 180))
+                            .animation(Animation.spring().delay(1))
                     }
                 }
             }
+        }
+    }
+    
+    func updateShowDetails() {
+        if showDetails == false {
+            showDetails = true
+        } else {
+            showDetails = false
         }
     }
     
@@ -139,7 +156,7 @@ struct CalcButtonsLayoutSwiftUIView: View {
 struct CalcButtonsLayoutSwiftUIView_Previews: PreviewProvider {
     
     static var previews: some View {
-        CalcButtonsLayoutSwiftUIView()
+        CalcButtonsLayoutSwiftUIView().environment(\.colorScheme, .dark)
     }
 }
 

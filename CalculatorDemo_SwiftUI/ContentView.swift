@@ -12,8 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            ResultsText()
-            CalcButtonSwiftUIView(action: {self.testFunc()}, title: "0", backgroundColor: .gray, textColor: .white, width: 50, height: 50, textAlignment: .center)
+            CalcButtonsLayoutSwiftUIView()
+            
         }
     }
     
@@ -25,7 +25,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView()//.environment(\.colorScheme, .dark)
     }
 }
 
